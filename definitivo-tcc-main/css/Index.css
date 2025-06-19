@@ -1,0 +1,103 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    position: absolute;
+    top: 1.5rem;
+    left: 2rem;
+    right: 2rem;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 4rem;
+}
+
+nav a {
+    margin-left: 1.5rem;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+
+
+.hero {
+    position: relative;
+    background-image: url('../imagem/2012.04.19\ -\ Ocelot\ Jumping\ -\ Texas\ -\ Larry\ Ditto.avif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: 90vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5vw;
+    color: white;
+}
+
+.texto {
+    max-width: 50%;
+    z-index: 2;
+}
+
+.coletivo {
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}
+
+.texto h1 {
+    font-size: 6vw;
+    line-height: 1.1;
+    color: white;
+}
+
+.texto .verde {
+    color: #00c96d;
+}
+
+.subtitulo {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+}
+
+/* Botão Doar */
+#doar {
+    background-color: #d62828;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    font-size: 1.25rem;
+    text-decoration: none;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: absolute;
+    right: 10vw;
+    bottom: 15vh;
+}
+
+#doar:hover {
+    background-color: #a31313;
+    transform: scale(1.1);
+}
