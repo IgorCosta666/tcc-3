@@ -241,7 +241,7 @@ main {
   color: #7ED957;
   cursor: pointer;
   flex-shrink: 0;
-  box-shadow: 0 2px 8px rgba(214, 40, 40, 0.15);
+  box-shadow: 0 2px 8px rgba(46, 214, 40, 0.15);
   user-select: none;
 }
 
@@ -276,6 +276,34 @@ main {
   font-weight: bold;
   color: #333;
 }
+ #btnDoar {
+   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #7ED957;
+  border: 2px solid #ffffff;
+  border-radius: 15px;
+  padding: 1.2rem;
+  width: 100px;
+  height: 50px;
+  transition: all 0.3s ease;
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #ffffff;
+  cursor: pointer;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(48, 68, 43, 0.15);
+  user-select: none;
+ }
+
+ #btnDoar:disabled {
+  
+  background-color: white ;
+  
+
+ }
 
 .btn-feito {
   margin-top: 1rem;
@@ -381,6 +409,7 @@ input[type=\"checkbox\"] {
 }
 
 #obrigado {
+  border: solid 2px #1f741c     ;
   display: none;
   justify-content: center;
   align-items: center;

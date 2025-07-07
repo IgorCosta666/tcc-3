@@ -232,63 +232,63 @@ body {
 
 /* TECNOLOGIA */
 .tecnologia {
-  background-color: #141414;
-  padding: 2rem;
-  color: white;
+    background-color: #141414;
+    padding: 2rem;
+    color: white;
 }
 
 .tecnologia h2 {
-  text-align: center;
-  color: white;
-  margin-bottom: 2rem;
-  font-size: 2rem;
+    text-align: center;
+    color: white;
+    margin-bottom: 2rem;
+    font-size: 2rem;
 }
 
 
 .tech-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2rem;
 }
 
 .organizacao {
-  width: 250px;
-  text-align: center;
+    width: 250px;
+    text-align: center;
 }
 
 .organizacao h4 {
-  color: #00bfff;
-  margin-bottom: 1rem;
-  font-size: 1.3rem;
+    color: #00bfff;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
 }
 
 .organizacaoUL {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
 }
 
 
 .icone-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 6rem;
 }
 
 .icone-item i {
-  font-size: 4rem;
-  padding: 0.5rem;
-  color: white;
+    font-size: 4rem;
+    padding: 0.5rem;
+    color: white;
 }
 
 
 .icone-item p {
-  font-size: 1rem;
-  margin-top: 0.3rem;
-  color: #ccc;
+    font-size: 1rem;
+    margin-top: 0.3rem;
+    color: #ccc;
 }
 
 /* AGRADECIMENTOS */
@@ -338,5 +338,14 @@ body {
 
     .hero-content p {
         font-size: 1rem;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .hero-content > img{
+        width: 25rem;
+        height: auto;
+        padding-right: 5rem;
     }
 }

@@ -64,7 +64,7 @@ nav.menu a {
 }
 
 .do {
-  color: green;
+    color: green;
 }
 
 /* BOTÃO HAMBURGUER - oculto no desktop */
@@ -432,60 +432,61 @@ nav.menu a {
 
 
 .apoiadores {
-  padding: 3rem 1rem;
-  background: #f4f1ea;
-  text-align: center;
-  padding-top: 10rem;
-  padding-bottom: 10rem;
+    padding: 3rem 1rem;
+    background: #f4f1ea;
+    text-align: center;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
 }
 
 .apoiadores h2 {
-  font-size: 3.5rem;
-  color: #1b1b1b;
-  margin-bottom: 2rem;
-  font-weight: 700;
-  padding-bottom: 4rem;
+    font-size: 3.5rem;
+    color: #1b1b1b;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    padding-bottom: 4rem;
 }
 
 .carrossel-apoiadores {
-  overflow: hidden;
-  position: relative;
-  width: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
 }
 
 .track-apoiadores {
-  display: flex;
-  gap: 2rem;
-  animation: deslizar 30s linear infinite;
-  width: max-content; 
+    display: flex;
+    gap: 2rem;
+    animation: deslizar 30s linear infinite;
+    width: max-content;
 }
 
 .apoiador {
-  flex: 0 0 auto;
-  text-align: center;
+    flex: 0 0 auto;
+    text-align: center;
 }
 
 .apoiador img {
-  width: 10rem;
-  height: 10rem;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #ddd;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ddd;
 }
 
 .apoiador p {
-  margin-top: 0.5rem;
-  font-weight: bold;
-  font-size: 1rem;
+    margin-top: 0.5rem;
+    font-weight: bold;
+    font-size: 1rem;
 }
 
 @keyframes deslizar {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
 
@@ -604,7 +605,173 @@ nav.menu a {
 }
 
 
-/* Versão Mobile */
+
+
+/* Banner do Mato do Julio */
+.banner-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 0;
+    padding: 0;
+    margin: 0;
+}
+
+/* Links do banner */
+.banner-container>a,
+.popup-produtos {
+    flex: 1 1 30%;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+.banner-container>a>div,
+.popup-produtos>a>div,
+.popup-produtos>div.bloco1 {
+    position: relative;
+    height: 350px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    border: solid 5px #ccc;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.banner-container>a>div>h3,
+.popup-produtos>a>div>h3,
+.popup-produtos>div.bloco1>h3 {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 2.5rem;
+    color: white;
+    font-weight: 700;
+    display: flex;
+    text-align: left;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+.bloco1 {
+    background-image: url(../imagem/loja.jpeg);
+}
+
+.bloco2 {
+    background-image: url(../imagem/doe.jpeg);
+}
+
+.bloco3 {
+    background-image: url(../imagem/resgates.jpeg);
+}
+
+.banner-container>a>div,
+.popup-produtos>a>div,
+.popup-produtos>div.bloco1 {
+    transform: scale(1.03);
+}
+
+.popup-produtos {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.produtos-destaque {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 5px solid #ccc;
+    padding: 20px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    text-align: center;
+
+}
+
+.popup-produtos:hover .produtos-destaque {
+    display: inline-block;
+}
+
+/* Layout dos produtos */
+.produtos-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Produto padrão */
+.produto {
+    width: 130px;
+    text-align: center;
+    user-select: none;
+}
+
+.produto img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.produtos-destaque h2 {
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    color: #222;
+}
+
+.banner-container>a>div {
+    cursor: pointer;
+}
+
+.contato-produto {
+    width: 10rem;
+}
+
+.produto.contato-produto {
+    background-color: #eaffea;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.btn-whats {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #25d366;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-whats:hover {
+    background-color: #1ebe5c;
+}
+
+
+
+
 @media (max-width: 768px) {
 
     body {
@@ -664,6 +831,7 @@ nav.menu a {
         padding: 7rem 1rem 3rem;
         background-attachment: scroll;
     }
+
     .texto {
         max-width: 100%;
     }
@@ -790,177 +958,13 @@ nav.menu a {
         height: 100%;
         border: none;
     }
-}
 
-
-/* Banner do Mato do Julio */
-.banner-container { 
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    gap: 0;
-    padding: 0;
-    margin: 0;
-}
-
-/* Links do banner */
-.banner-container > a,
-.popup-produtos {
-    flex: 1 1 30%;
-    text-decoration: none;
-    margin: 0;
-    padding: 0;
-    background-color: black;
-}
-
-.banner-container > a > div,
-.popup-produtos > a > div,
-.popup-produtos > div.bloco1 {
-    position: relative;
-    height: 350px;
-    background-size: cover;
-    background-position: center;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-    border: solid 5px #ccc;
-    margin: 0;
-    padding: 0;
-    cursor: pointer;
-}
-
-.banner-container > a > div > h3,
-.popup-produtos > a > div > h3,
-.popup-produtos > div.bloco1 > h3 {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    font-size: 2.5rem;
-    color: white;
-    font-weight: 700;
-    display: flex;
-    text-align: left;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-    margin: 0;
-    padding: 0;
-    line-height: 1;
-}
-
-.bloco1 {
-    background-image: url(../imagem/loja.jpeg);
-}
-.bloco2 {
-    background-image: url(../imagem/doe.jpeg);
-}
-.bloco3 {
-    background-image: url(../imagem/resgates.jpeg);
-}
-
-.banner-container > a > div:hover,
-.popup-produtos > a > div:hover,
-.popup-produtos > div.bloco1:hover {
-    transform: scale(1.03);
-}
-
-.popup-produtos {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-}
-
-.produtos-destaque {
-    display: none;
-    position: fixed;     
-    top: 50%;            
-    left: 50%;           
-    transform: translate(-50%, -50%); 
-    background-color: white;
-    border: 5px solid #ccc;
-    padding: 20px;
-    width: 600px;           
-    overflow-y: auto;    
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    z-index: 9999;
-    text-align: center;
-}
-
-.popup-produtos:hover .produtos-destaque {
-    display: inline-block;
-}
-
-/* Layout dos produtos */
-.produtos-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-
-/* Produto padrão */
-.produto {
-    width: 130px;
-    text-align: center;
-    user-select: none;
-}
-
-.produto img {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
-
-
-.produtos-destaque h2 {
-    margin-bottom: 15px;
-    font-size: 1.8rem;
-    color: #222;
-}
-
-
-.banner-container > a > div {
-    cursor: pointer;
-}
-
-.contato-produto{
-    width: 10rem;
-}
-
-.produto.contato-produto {
-    background-color: #eaffea;
-    padding: 10px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-}
-
-
-.btn-whats {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 8px 12px;
-    background-color: #25d366;
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-.btn-whats:hover {
-    background-color: #1ebe5c;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
     .banner-container {
         flex-wrap: wrap;
         gap: 10px;
     }
 
-    .banner-container > a,
+    .banner-container>a,
     .popup-produtos {
         flex: 1 1 100%;
     }
@@ -974,6 +978,33 @@ nav.menu a {
     }
 
     .popup-produtos:hover .produtos-destaque {
-        display: block;
+        display: none;
     }
+    .popup-produtos {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.produtos-destaque {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 5px solid #ccc;
+    padding: 20px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    text-align: center;
+}
+
+.popup-produtos:hover .produtos-destaque {
+    display: none;
+}
 }
