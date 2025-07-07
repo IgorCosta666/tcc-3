@@ -1,0 +1,342 @@
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0f0f0f;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+
+.hero {
+    background: linear-gradient(to right, #0f0f0f 60%, #007bff 100%);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero-content img {
+    height: 25rem;
+
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: #e0e0e0;
+}
+
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* SOBRE NÓS */
+.sobre-nos h2,
+.time h2,
+.paleta-cores h2,
+.swot h2,
+.nicho h2,
+.tecnologia h2,
+.agradecimentos h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #00bfff;
+    padding-bottom: 3rem;
+}
+
+.sobre-nos p {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #ccc;
+    padding-bottom: 3rem;
+}
+
+/* MISSÃO, VISÃO, VALORES */
+.valores {
+    padding: 2rem;
+    background-color: #141414;
+    padding-bottom: 10rem;
+}
+
+.valores h2 {
+    text-align: center;
+    color: #00bfff;
+    margin-bottom: 2rem;
+    padding-bottom: 3rem;
+}
+
+.valores-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.valores-container .card {
+    background-color: #1a1a1a;
+    padding: 1.5rem;
+    border-radius: 10px;
+    width: 280px;
+    text-align: center;
+    transition: transform 0.7s;
+    box-shadow: 1px 1px 9px 1px #00bfff;
+}
+
+.valores-container .card:hover {
+    transform: translateY(-5px);
+    background-color: #222;
+    box-shadow: 1px 8px 9px 1px #00bfff;
+}
+
+.valores h3 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #00bfff;
+}
+
+/* TIME */
+.time .cards-time {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.card-time {
+    background-color: #191919;
+    padding: 1rem;
+    border-radius: 12px;
+    text-align: center;
+    width: 150px;
+    transition: transform 0.3s;
+}
+
+.card-time img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+}
+
+.cards-time p {
+    background-color: #191919;
+    border-radius: 20px;
+}
+
+.card-time:hover {
+    transform: scale(1.05);
+    background-color: #00bfff;
+}
+
+/* PALETA DE CORES */
+.paleta-cores .cores {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 1rem;
+    padding-bottom: 10rem;
+}
+
+.paleta-cores h2 {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.cor {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: #1a1a1a;
+    padding: 1rem;
+    border-radius: 10px;
+    width: 250px;
+}
+
+.bolinha {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.preto {
+    background-color: #000;
+}
+
+.azul {
+    background-color: #007bff;
+}
+
+.branco {
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+/* SWOT */
+.swot .grid-swot {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+.swot-box {
+    background-color: #1a1a1a;
+    padding: 1.2rem;
+    border-left: 5px solid #007bff;
+    border-radius: 8px;
+}
+
+.swot-box h3 {
+    color: #00bfff;
+    margin-bottom: 0.5rem;
+}
+
+.swot-box ul {
+    list-style: disc;
+    padding-left: 1.2rem;
+}
+
+/* NICHO */
+.nicho {
+    text-align: center;
+    padding: 3rem 1rem;
+    background-color: #121212;
+}
+
+.nicho p {
+    max-width: 800px;
+    margin: 1rem auto;
+    font-size: 1.1rem;
+    color: #ccc;
+}
+
+/* TECNOLOGIA */
+.tecnologia {
+  background-color: #141414;
+  padding: 2rem;
+  color: white;
+}
+
+.tecnologia h2 {
+  text-align: center;
+  color: white;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+
+.tech-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 2rem;
+}
+
+.organizacao {
+  width: 250px;
+  text-align: center;
+}
+
+.organizacao h4 {
+  color: #00bfff;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.organizacaoUL {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+
+.icone-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 6rem;
+}
+
+.icone-item i {
+  font-size: 4rem;
+  padding: 0.5rem;
+  color: white;
+}
+
+
+.icone-item p {
+  font-size: 1rem;
+  margin-top: 0.3rem;
+  color: #ccc;
+}
+
+/* AGRADECIMENTOS */
+.agradecimentos .parceiros {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.agradecimentos img {
+    max-width: 100px;
+    height: auto;
+    filter: grayscale(1);
+    transition: filter 0.3s ease;
+}
+
+.agradecimentos img:hover {
+    filter: grayscale(0);
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .valores {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tech-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .paleta-cores .cores {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-time {
+        width: 120px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+}

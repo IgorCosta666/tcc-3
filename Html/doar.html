@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Doações - Mato do Julio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/doar.css" />
+  <link rel="icon" href="../imagem/Novo Projeto.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <a href="../index.html"><img src="../imagem/Novo Projeto.png" alt="Logo"></a>
+      <span> coletivo <strong> mato <strong class="do">do</strong> júlio</strong></span>
+    </div>
+
+    <button class="hamburguer" aria-label="Abrir menu">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <nav class="menu">
+      <a href="resgastes.html">Resgates</a>
+      <a href="#contatos">Contatos</a>
+    </nav>
+  </header>
+  <main>
+    <section class="doacao">
+      <p id="doar">DOAR</p>
+      <div class="conteudo-doacao">
+        <div class="box-valores">
+          <p id="valores">Valores</p>
+          <div class="valores">
+            <div class="valor" data-valor="10">R$10</div>
+            <div class="valor" data-valor="15">R$15</div>
+            <div class="valor" data-valor="25">R$25</div>
+            <div class="valor" data-valor="50">R$50</div>
+            <div class="valor" data-valor="100">R$100</div>
+            <div class="valor" data-valor="150">R$150</div>
+            <div class="valor" data-valor="200">R$200</div>
+            <div class="valor" data-valor="250">R$250</div>
+            <div class="valor" data-valor="350">R$350</div>
+            <div class="digite" data-valor="#"></div>
+          </div>
+        </div>
+
+        <div class="info-doacao">
+          <p id="p-doacao">
+            Você pode contribuir com <strong>doações mensais</strong> ou pontuais via cartão de crédito, além de usar o
+            PIX. Se preferir, também é possível agendar um PIX mensal diretamente do seu banco.
+          </p>
+          <div class="opcao-pagamento" id="opcaoPagamento">
+            <div id="textoPagamento"> opções de pagamento </div>
+            <ul id="metodosPagamento" class="lista-pagamento">
+              <li><button class="metodo-btn" data-metodo="PIX"><img src="../imagem/pix.png" alt="PIX" /></button></li>
+              <li><button class="metodo-btn" data-metodo="Crédito"><img src="../imagem/credito.png"
+                    alt="Crédito" /></button></li>
+              <li><button class="metodo-btn" data-metodo="Débito"><img src="../imagem/debito.png"
+                    alt="Débito" /></button>
+              </li>
+            </ul>
+
+            <button id="btnFeitoAbrir" class="btn-feito" disabled>Feito</button>
+
+            <div id="resumoDoacao" class="resumo-doacao"></div>
+
+            <!-- Modal -->
+            <div id="modalDoacao" class="modal" style="display:none;">
+              <div class="modal-content">
+                <span id="fecharModal" class="fechar">&times;</span>
+
+                <div id="confirmacaoMetodo">
+                  <h2>Confirme sua escolha</h2>
+                  <p>Você selecionou o método de pagamento: <strong id="metodoEscolhido"></strong></p>
+                  <button id="btnConfirmarMetodo" class="btn-modal">Confirmar</button>
+                  <button id="btnCancelarMetodo" class="btn-modal">Cancelar</button>
+                </div>
+
+                <form id="formDoacao" style="display:none; margin-top: 1rem; text-align:left;">
+                  <label>Nome:<br /><input type="text" id="nome" placeholder="Seu nome" /></label><br /><br />
+                  <label>Estado:<br />
+                    <select id="estado">
+                      <option value="">Selecione</option>
+                      <option value="AC">Acre</option>
+                      <option value="AL">Alagoas</option>
+                      <option value="AP">Amapá</option>
+                      <option value="AM">Amazonas</option>
+                      <option value="BA">Bahia</option>
+                      <option value="CE">Ceará</option>
+                      <option value="DF">Distrito Federal</option>
+                      <option value="ES">Espírito Santo</option>
+                      <option value="GO">Goiás</option>
+                      <option value="MA">Maranhão</option>
+                      <option value="MT">Mato Grosso</option>
+                      <option value="MS">Mato Grosso do Sul</option>
+                      <option value="MG">Minas Gerais</option>
+                      <option value="PA">Pará</option>
+                      <option value="PB">Paraíba</option>
+                      <option value="PR">Paraná</option>
+                      <option value="PE">Pernambuco</option>
+                      <option value="PI">Piauí</option>
+                      <option value="RJ">Rio de Janeiro</option>
+                      <option value="RN">Rio Grande do Norte</option>
+                      <option value="RS">Rio Grande do Sul</option>
+                      <option value="RO">Rondônia</option>
+                      <option value="RR">Roraima</option>
+                      <option value="SC">Santa Catarina</option>
+                      <option value="SP">São Paulo</option>
+                      <option value="SE">Sergipe</option>
+                      <option value="TO">Tocantins</option>
+
+
+                    </select>
+                  </label><br /><br />
+                  <label>CPF:<br /><input type="text" id="cpf" placeholder="000.000.000-00"
+                      maxlength="14" /></label><br /><br />
+
+                  <div id="cartaoCampos" style="display:none;">
+                    <label>Número do cartão:<br /><input type="text" id="numeroCartao" placeholder="0000 0000 0000 0000"
+                        maxlength="19" /></label><br /><br />
+                    <label>CVC:<br /><input type="number" id="CVCCartao" placeholder="CVC"
+                        maxlength="3" /></label><br /><br />
+
+
+
+                    <label>Validade:<br />
+                      <select id="mesValidade">
+                        <option value="">Mês</option>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                      </select>
+                      <select id="anoValidade">
+                        <option value="">Ano</option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                        <option value="2027">2027</option>
+                        <option value="2028">2028</option>
+                        <option value="2029">2029</option>
+                        <option value="2030">2030</option>
+                      </select>
+                    </label><br /><br />
+                  </div>
+
+                  <label><input type="checkbox" id="anonimo" /> Quero doar anonimamente</label><br /><br />
+                  <button type="submit" id="btnDoar" disabled>Doar</button>
+                </form>
+
+                <div id="qrCodePIX" style="display:none; text-align:center; margin-top: 1rem;">
+                  <h3>Use este QR Code para pagar via PIX</h3>
+                  <img src="../imagem/qrcode.png" alt="QR Code PIX" class="qr-img" />
+                </div>
+
+                <!-- Botão de confirmação dentro do modal -->
+                <button id="btn-final" class="btn-feito" style="display: none;">Confirmar pagamento</button>
+
+                <button id="obrigado" style="display: none;"> obrigado otario vou comprar é droga </button>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div class="conteudo-docao">
+    </section>
+  </main>
+
+  <section class="contatos" id="contatos">
+    <footer class="footer">
+      <div class="footer-container">
+
+        <div class="footer-logo">
+          <img src="../imagem/Novo Projeto.png" alt="Logo do Mato do Júlio" />
+          <h2>Coletivo Mato do Júlio</h2>
+        </div>
+
+        <div class="footer-links">
+          <h3>Institucional</h3>
+          <ul>
+            <li><a href="#">Quem somos</a></li>
+            <li><a href="#">O que fazemos</a></li>
+            <li><a target="_blank"
+                href="https://api.whatsapp.com/send?phone=5551997703787&text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20Instagram%20do%20Mato%20do%20J%C3%BAlio.">Fale
+                conosco</a></li>
+          </ul>
+
+
+        </div>
+        <div class="footer-endereço">
+          <h3>Endereço</h3>
+          <ul>
+            <li><a
+                href="https://www.google.com/maps/place/Mato+do+J%C3%BAlio/@-29.9510388,-51.0903428,638m/data=!3m2!1e3!4b1!4m6!3m5!1s0x9519739b836ec6c9:0x577ee2bf4fe5b3f9!8m2!3d-29.9510435!4d-51.0877679!16s%2Fg%2F11jvmj01d6!5m1!1e4?entry=ttu&g_ep=EgoyMDI1MDYyOS4wIKXMDSoASAFQAw%3D%3D"
+                target="_blank">Av. Gen. Flores da Cunha, 7017-6993</a></li>
+            <li><a
+                href="https://www.google.com/maps/place/Mato+do+J%C3%BAlio/@-29.9510388,-51.0903428,638m/data=!3m2!1e3!4b1!4m6!3m5!1s0x9519739b836ec6c9:0x577ee2bf4fe5b3f9!8m2!3d-29.9510435!4d-51.0877679!16s%2Fg%2F11jvmj01d6!5m1!1e4?entry=ttu&g_ep=EgoyMDI1MDYyOS4wIKXMDSoASAFQAw%3D%3D"
+                target="_blank">Vila Bom Principio</a></li>
+            <li><a
+                href="https://www.google.com/maps/place/Mato+do+J%C3%BAlio/@-29.9510388,-51.0903428,638m/data=!3m2!1e3!4b1!4m6!3m5!1s0x9519739b836ec6c9:0x577ee2bf4fe5b3f9!8m2!3d-29.9510435!4d-51.0877679!16s%2Fg%2F11jvmj01d6!5m1!1e4?entry=ttu&g_ep=EgoyMDI1MDYyOS4wIKXMDSoASAFQAw%3D%3D"
+                target="_blank">Cachoeirinha , RS</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-social">
+          <h3>Siga-nos</h3>
+          <ul>
+            <li><a href="https://www.instagram.com/matodojulio/" target="_blank"><i class="fab fa-instagram"></i>
+                Instagram</a></li>
+            <li><a href="https://www.youtube.com/@matodojulio" target="_blank"><i class="fab fa-youtube"></i>
+                YouTube</a></li>
+            <li><a href="https://m.facebook.com/mato.dojulio.14/" target="_blank"><i class="fab fa-facebook"></i>
+                Facebook</a></li>
+            <li><a href="https://x.com/MatoDoJulio" target="_blank"><i class="fab fa-X-twitter"></i> Twitter</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="ano"></span> Coletivo Mato do Júlio. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+  </section>
+
+  <script src="../js/doar.js"></script>
+</body>
+
+</html>
